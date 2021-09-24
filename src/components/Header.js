@@ -23,10 +23,8 @@ function Header({category, setCategory, word, setWord}){
         setWord("")
     }
 
-    return <div>
-        <h1 style={{color:'#fff'}}>{word ? word : 'Word Hunt'}</h1>
-
-        <section>
+    return <div className="header">
+        <section className="header-sec">
             <TextField label="Search a word" value={word} onChange={(e)=>setWord(e.target.value)} className="search"/>
             
             <TextField select label="Language" value={category} onChange={(e)=>handleChange(e.target.value)}>
